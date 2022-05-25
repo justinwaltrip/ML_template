@@ -1,0 +1,13 @@
+# ignore data dir
+/data/processed/*
+/data/raw/*
+
+# ignore saved figures, models, notebooks
+/figures/*
+/models/*
+
+# save folder structure
+!/**/.gitkeep
+
+# data version control
+!/**/*.dvc
