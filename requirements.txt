@@ -1,0 +1,4 @@
+# data version control
+dvc
+'dvc[s3]'
+boto3
