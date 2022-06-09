@@ -1,19 +1,11 @@
 # IDE specifics
 /.vscode
 
-# ignore data dir
-/data/processed/*
-/data/raw/*
-
-# ignore saved figures, models, notebooks
-/saved/figures/*
-/saved/models/*
-
 # save folder structure
 !/**/.gitkeep
 
-# data version control
-!/**/*.dvc
-
 # venv
 /.env
+
+# data version control
+!/**/*.dvc
