@@ -1,13 +1,19 @@
+# IDE specifics
+/.vscode
+
 # ignore data dir
 /data/processed/*
 /data/raw/*
 
 # ignore saved figures, models, notebooks
-/figures/*
-/models/*
+/saved/figures/*
+/saved/models/*
 
 # save folder structure
 !/**/.gitkeep
 
 # data version control
 !/**/*.dvc
+
+# venv
+/.env
