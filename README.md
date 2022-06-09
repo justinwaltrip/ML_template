@@ -18,6 +18,7 @@ git commit -m "Init DVC"
 ```
 
 ```
+echo "!/**/.gitkeep" >> .dvcignore
 dvc add data
 git add data.dvc
 git commit -m "Add data folder to DVC"
