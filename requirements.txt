@@ -1,4 +1,3 @@
 # data version control
 dvc
-'dvc[s3]'
-boto3
+dvc[s3]
