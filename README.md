@@ -14,21 +14,22 @@ pip install -r requirements.txt
 
 ```
 dvc init
-rm **/.gitkeep
 git commit -m "Init DVC"
 ```
 
 ```
+rm data/**/.gitkeep
 git rm -r --cached 'data'
 dvc add data
-git add data.dvc
+git add data.dvc .gitignore
 git commit -m "Add data folder to DVC"
 ```
 
 ```
+rm saved/**/.gitkeep
 git rm -r --cached 'saved'
 dvc add saved
-git add saved.dvc
+git add saved.dvc .gitignore
 git commit -m "Add saved folder to DVC"
 ```
 
@@ -41,7 +42,11 @@ git push
 Follow tutorial [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) to create S3 bucket
 
 ```
-dvc remote add -d remote s3://<insert bucket name here>/<insert folder name here>
+dvc remote add -d remote s3://<insert bucket name here>/dvc
+```
+
+```
+dvc remote modify remote region <insert region here>
 ```
 
 ```
@@ -49,9 +54,12 @@ dvc remote modify remote access_key_id <insert AWS_ACCESS_KEY_ID here>
 ```
 
 ```
-dvc remote modify remote secret_access_key <insert AWS_SECRET_ACCESS_KEY here>
+dvc remote modify --local myremote secret_access_key <insert AWS_SECRET_ACCESS_KEY here>
 ```
 
 ```
+git add .dvc/config
+git commit -m "Added S3 Remote"
+git push
 dvc push
 ```
