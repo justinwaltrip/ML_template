@@ -46,7 +46,7 @@ dvc remote add -d remote s3://<insert bucket name here>/dvc
 ```
 
 ```
-dvc remote modify remote region <insert region here>
+dvc remote modify remote region <insert bucket region here>
 ```
 
 ```
@@ -54,7 +54,7 @@ dvc remote modify remote access_key_id <insert AWS_ACCESS_KEY_ID here>
 ```
 
 ```
-dvc remote modify --local myremote secret_access_key <insert AWS_SECRET_ACCESS_KEY here>
+dvc remote modify --local remote secret_access_key <insert AWS_SECRET_ACCESS_KEY here>
 ```
 
 ```
