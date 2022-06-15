@@ -1,5 +1,22 @@
 # Machine Learning Template
 
+├── Makefile
+├── README.md
+├── data
+│   ├── processed
+│   └── raw
+├── notebooks
+├── out.txt
+├── requirements.txt
+├── saved
+│   ├── figures
+│   └── models
+├── scripts
+│   ├── eval.py
+│   ├── process.py
+│   └── train.py
+└── utils
+
 ## Getting Started
 
 ### Installing Dependencies
