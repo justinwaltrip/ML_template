@@ -1,5 +1,6 @@
 # Machine Learning Template
 
+```
 ├── Makefile
 ├── README.md
 ├── data
@@ -16,6 +17,7 @@
 │   ├── process.py
 │   └── train.py
 └── utils
+```
 
 ## Getting Started
 
