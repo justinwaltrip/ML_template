@@ -79,9 +79,18 @@ dvc push
 
 ### Jupyter Notebook
 
-To use jupyter notebooks within your venv environment:
+To use jupyter notebooks within your venv environment,
 
 ```
 pip install jupyter ipykernel
 python -m ipykernel install --user --name=.env
 ```
+
+To run jupyter,
+
+```
+jupyter notebook
+```
+
+Navigate to the notebooks directory and select .env as your interpreter.
+
