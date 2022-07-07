@@ -15,25 +15,19 @@ pip install -r requirements.txt
 ```
 dvc init
 git commit -m "Init DVC"
-```
 
-```
 rm data/**/.gitkeep
 git rm -r --cached 'data'
 dvc add data
 git add data.dvc .gitignore
 git commit -m "Add data folder to DVC"
-```
 
-```
 rm saved/**/.gitkeep
 git rm -r --cached 'saved'
 dvc add saved
 git add saved.dvc .gitignore
 git commit -m "Add saved folder to DVC"
-```
 
-```
 git push
 ```
 
