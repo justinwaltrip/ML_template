@@ -9,3 +9,6 @@
 
 # data version control
 !/**/*.dvc
+
+# notebooks
+notebooks/.ipynb_checkpoints
