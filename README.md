@@ -1,5 +1,7 @@
 # Machine Learning Template
 
+## Repository Structure
+
 ```
 ├── Makefile
 ├── README.md
@@ -7,7 +9,6 @@
 │   ├── processed
 │   └── raw
 ├── notebooks
-├── out.txt
 ├── requirements.txt
 ├── saved
 │   ├── figures
@@ -18,6 +19,20 @@
 │   └── train.py
 └── utils
 ```
+
+- The `Makefile` should be used to setup the repository (ex. install required OS libraries) or to save complex commands/workflows such as training or running experiments with many command line arguments.
+
+- The `data` folder is versioned using DVC and includes subfolders for `raw` and `processed` data.
+
+- The `notebooks` folder should be used for data exploration or in other situations where data visualization may be useful.
+
+- The `requirements.txt` file should be used to keep track of required dependencies for the project and should ideally include specific package versions for future reproducability.
+
+- The `saved` folder is versioned using DVC and includes subfolders for `figures` and `models`.
+
+- The `scripts` folder contains python script files for evaluation (`eval.py`), data processing (`process.py`), and training `train.py`.
+
+- The `utils` folder should include utility functions used by notebooks and script files.
 
 ## Getting Started
 
@@ -33,24 +48,23 @@ pip install -r requirements.txt
 
 ```
 dvc init
+dvc config core.autostage true
 git commit -m "Init DVC"
 
 rm data/**/.gitkeep
 git rm -r --cached 'data'
 dvc add data
-git add data.dvc .gitignore
 git commit -m "Add data folder to DVC"
 
 rm saved/**/.gitkeep
 git rm -r --cached 'saved'
 dvc add saved
-git add saved.dvc .gitignore
 git commit -m "Add saved folder to DVC"
 
 git push
 ```
 
-### Push to S3
+### Push DVC files to S3
 
 Follow tutorial [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) to create S3 bucket
 
