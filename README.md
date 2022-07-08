@@ -102,7 +102,7 @@ git push
 4. Add AWS Credentials to DVC Remote 
 
 ```
-dvc remote modify remote access_key_id <insert AWS_ACCESS_KEY_ID here>
+dvc remote modify --local remote access_key_id <insert AWS_ACCESS_KEY_ID here>
 ```
 
 ```
